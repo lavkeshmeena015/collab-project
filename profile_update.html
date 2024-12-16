@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body{
+      background-image: url("assets/images/1.jpg");
+      backdrop-filter: blur(5px);
+      /* overflow:hidden; */
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* background-image: url("assets/images/1.jpg"); */
+      overflow: auto;
+    }
+    input{
+      background: transparent !important;
+      color: rgb(255, 255, 255) !important;
+    }
+    label{
+      color: rgb(0, 0, 0);
+    }
+    input::placeholder, 
+    textarea::placeholder {
+        color: rgb(0, 0, 0) !important; /* Change to your desired color */
+        font-style: italic; /* Optional: Makes the placeholder text italic */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 class="text-center">Registration Form</h2>
+    <form>
+      <!-- First Name -->
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+      </div>
+
+      <!-- Middle Name and Last Name -->
+      <div class="form-group">
+        <label for="middleName">Middle Name (if any)</label>
+        <input type="text" class="form-control" id="middleName" placeholder="Enter Middle Name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name (if any)</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+      </div>
+
+      <!-- Mobile Number -->
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" class="form-control" id="mobile" placeholder="Enter Mobile Number" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" id="dob" required>
+      </div>
+
+      <!-- Current Degree -->
+      <div class="form-group">
+        <label for="degree">Current Degree</label>
+        <input type="text" class="form-control" id="degree" placeholder="Enter Current Degree" required>
+      </div>
+
+      <!-- Current College Name -->
+      <div class="form-group">
+        <label for="college">Current College Name</label>
+        <input type="text" class="form-control" id="college" placeholder="Enter College Name" required>
+      </div>
+
+      <!-- Year (Passout or Pursuing) -->
+      <div class="form-group">
+        <label for="year">Year (Passout or Pursuing)</label>
+        <select class="form-control" id="year" required>
+          <option value="Passout">Passout</option>
+          <option value="Pursuing">Pursuing</option>
+        </select>
+      </div>
+
+      <!-- Pursuing Year -->
+      <div class="form-group" id="pursuingYear" style="display: none;">
+        <label for="pursuingYear">Year of Study</label>
+        <input type="number" class="form-control" id="pursuingYear" placeholder="Enter Year of Study">
+      </div>
+
+      <!-- 12th School -->
+      <div class="form-group">
+        <label for="school12">12th School</label>
+        <input type="text" class="form-control" id="school12" placeholder="Enter 12th School Name" required>
+      </div>
+
+      <!-- 10th School -->
+      <div class="form-group">
+        <label for="school10">10th School</label>
+        <input type="text" class="form-control" id="school10" placeholder="Enter 10th School Name" required>
+      </div>
+
+      <!-- Current City -->
+      <div class="form-group">
+        <label for="city">Current City</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter Current City" required>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-group">
+        <label for="skills">Skills</label>
+        <input type="text" class="form-control" id="skills" placeholder="Enter Skills" oninput="addSkillField()">
+      </div>
+
+      <!-- GitHub Profile -->
+      <div class="form-group">
+        <label for="github">GitHub Profile</label>
+        <input type="url" class="form-control" id="github" placeholder="Enter GitHub Profile URL">
+      </div>
+
+      <!-- LinkedIn Profile -->
+      <div class="form-group">
+        <label for="linkedin">LinkedIn Profile</label>
+        <input type="url" class="form-control" id="linkedin" placeholder="Enter LinkedIn Profile URL">
+      </div>
+
+      <!-- Portfolio Link -->
+      <div class="form-group">
+        <label for="portfolio">Portfolio Link</label>
+        <input type="url" class="form-control" id="portfolio" placeholder="Enter Portfolio Link">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS & jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Show/hide the "Pursuing Year" field based on the selection
+    document.getElementById('year').addEventListener('change', function () {
+      var pursuingYearField = document.getElementById('pursuingYear');
+      if (this.value === 'Pursuing') {
+        pursuingYearField.style.display = 'block';
+      } else {
+        pursuingYearField.style.display = 'none';
+      }
+    });
+
+    // Add a new skill input field when the user types in the skill field
+    function addSkillField() {
+      var skillInput = document.getElementById('skills').value;
+      if (skillInput !== "") {
+        var newSkillField = document.createElement("input");
+        newSkillField.type = "text";
+        newSkillField.classList.add("form-control", "mt-2");
+        newSkillField.placeholder = "Add another skill";
+        document.querySelector(".form-group:last-child").appendChild(newSkillField);
+      }
+    }
+  </script>
+</body>
+</html>

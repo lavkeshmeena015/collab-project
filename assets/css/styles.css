@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+
+
+
+.main {
+  background-image: url('../images/1.jpg');
+  background-size: cover;
+  height: 90vh;
+  text-align: center;
+  align-content: center;
+  color: yellow;
+}
+
+.avatar-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  position: relative;
+  top: -8px;
+  box-shadow: 3px 4px 20px 2px #97a375;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contents {
+  /* background: white; */
+  background: transparent;
+  color: yellow;
+=======
 body {
   background-image: url("assets\images\1.jpg");
 }
@@ -33,11 +80,17 @@ body {
 
 .modal-content {
   background: white;
+>>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
   padding: 20px;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
+<<<<<<< HEAD
+  /* box-shadow: 6px 8px 20px 5px rgb(143 178 89 / 49%); */
+  box-shadow: 6px 8px 20px 5px rgb(0 0 0 / 49%);
+=======
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+>>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
 }
 
 .close {
@@ -59,6 +112,176 @@ body {
   top: -10px;
 }
 
+<<<<<<< HEAD
+#closeModal>span {
+  cursor: pointer;
+}
+
+.sign-in {
+  display: none;
+}
+
+/* Floating label styles */
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.usr-input {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: yellow;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  box-shadow: 1px 3px 5px 1px #516442;
+}
+
+.usr-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+  position: absolute;
+  top: 6.5px;
+  left: 14px;
+  font-size: 16px;
+  color: yellow;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Floating effect */
+.usr-input:focus+label,
+.usr-input:not(:placeholder-shown)+label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #000000;
+  background-color: #adad5f;
+  border-radius: .4rem;
+  padding: 1px 8px;
+}
+
+.form-text-email {
+  font-size: .9rem;
+  color: yellow;
+  margin-top: 1rem;
+  padding-left: 5px;
+}
+
+
+#signup,
+#login {
+  background: none;
+  color: #007bff;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profile-btn:hover {
+
+  color: yellow !important;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  background: #d1d1d1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 5px 5px 1px rgb(167 159 219);
+  flex: 1 1 calc(33% - 20px);
+  box-sizing: border-box;
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+.line {
+  border: 1px solid black;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 99vw;
+  /* Width larger than the parent */
+  background-color: coral;
+  bottom: -50.5px;
+}
+
+.feature-heading {
+  text-align: center;
+}
+
+.heading>h1 {
+  background: black;
+  z-index: 5;
+  display: inline-block;
+  position: relative;
+  color: yellow;
+  border: 2px solid yellow;
+  border-radius: .9rem;
+  /* padding: 0.2rem 0.5rem; */
+  padding: 0 1.2rem 0.2rem 1.2rem;
+}
+
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0; /* Optional spacing */
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  flex: 1; /* Equal spacing */
+  border-bottom: 2px solid black; /* Horizontal lines */
+  margin: 0 10px; /* Space around the title */
+}
+
+.title {
+  padding: 5px 15px;
+  background-color: black;
+  color: yellow;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid yellow; /* Yellow border */
+  text-align: center;
+  white-space: nowrap; /* Prevent wrapping */
+=======
 #closeModal > span {
   cursor: pointer;
+>>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
 }

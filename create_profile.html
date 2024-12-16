@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="file"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section h3 {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Profile Form</h1>
+        <form action="/submit-profile" method="POST">
+            
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="linkedin">LinkedIn Profile (optional)</label>
+                <input type="text" id="linkedin" name="linkedin">
+            </div>
+
+            <!-- Academic Background -->
+            <div class="form-section">
+                <h3>Academic Background</h3>
+                <label for="school">Current School/University</label>
+                <input type="text" id="school" name="school" required>
+
+                <label for="course">Course/Field of Study</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="year">Year of Study</label>
+                <input type="text" id="year" name="year" required>
+
+                <label for="gpa">GPA</label>
+                <input type="text" id="gpa" name="gpa">
+            </div>
+
+            <!-- Skills -->
+            <div class="form-section">
+                <h3>Skills</h3>
+                <label for="hard-skills">Hard Skills</label>
+                <textarea id="hard-skills" name="hard-skills" rows="4" placeholder="e.g., Python, Data Analysis, Graphic Design"></textarea>
+
+                <label for="soft-skills">Soft Skills</label>
+                <textarea id="soft-skills" name="soft-skills" rows="4" placeholder="e.g., Communication, Leadership, Problem-solving"></textarea>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="form-section">
+                <h3>Work Experience/Internships</h3>
+                <label for="position">Position/Role</label>
+                <input type="text" id="position" name="position">
+
+                <label for="company">Company/Organization</label>
+                <input type="text" id="company" name="company">
+
+                <label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration">
+
+                <label for="responsibilities">Responsibilities</label>
+                <textarea id="responsibilities" name="responsibilities" rows="4"></textarea>
+            </div>
+
+            <!-- Certifications and Courses -->
+            <div class="form-section">
+                <h3>Certifications and Courses</h3>
+                <label for="certifications">Certifications</label>
+                <textarea id="certifications" name="certifications" rows="4" placeholder="e.g., Microsoft Certified, Coursera Course"></textarea>
+
+                <label for="courses">Online Courses</label>
+                <textarea id="courses" name="courses" rows="4" placeholder="e.g., Data Science, Web Development"></textarea>
+            </div>
+
+            <!-- Projects -->
+            <div class="form-section">
+                <h3>Projects</h3>
+                <label for="projects">List of Projects</label>
+                <textarea id="projects" name="projects" rows="4" placeholder="e.g., Web App, Mobile App, Data Analysis"></textarea>
+            </div>
+
+            <!-- Extracurricular Activities -->
+            <div class="form-section">
+                <h3>Extracurricular Activities</h3>
+                <label for="activities">Activities</label>
+                <textarea id="activities" name="activities" rows="4" placeholder="e.g., Sports, Volunteering, Club Memberships"></textarea>
+            </div>
+
+            <!-- Languages -->
+            <div class="form-section">
+                <h3>Languages</h3>
+                <label for="languages">Languages Known</label>
+                <textarea id="languages" name="languages" rows="4" placeholder="e.g., English, Spanish, French"></textarea>
+            </div>
+
+            <!-- Career Interests -->
+            <div class="form-section">
+                <h3>Career Interests</h3>
+                <label for="career-path">Preferred Career Path</label>
+                <input type="text" id="career-path" name="career-path">
+
+                <label for="future-goals">Future Goals</label>
+                <textarea id="future-goals" name="future-goals" rows="4"></textarea>
+            </div>
+
+            <!-- References -->
+            <div class="form-section">
+                <h3>References</h3>
+                <label for="references">Reference Names & Contact (optional)</label>
+                <textarea id="references" name="references" rows="4"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="text-align: center;">
+                <button type="submit">Submit Profile</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
