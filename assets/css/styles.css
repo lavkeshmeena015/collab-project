@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -44,53 +43,12 @@
   /* background: white; */
   background: transparent;
   color: yellow;
-=======
-body {
-  background-image: url("assets\images\1.jpg");
-}
-/* Avatar styles */
-.avatar-container {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd;
-  position: relative;
-  top: -8px;
-}
-
-/* Other modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
->>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
   padding: 20px;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
-<<<<<<< HEAD
   /* box-shadow: 6px 8px 20px 5px rgb(143 178 89 / 49%); */
   box-shadow: 6px 8px 20px 5px rgb(0 0 0 / 49%);
-=======
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
->>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
 }
 
 .close {
@@ -112,7 +70,6 @@ body {
   top: -10px;
 }
 
-<<<<<<< HEAD
 #closeModal>span {
   cursor: pointer;
 }
@@ -280,8 +237,4 @@ label {
   border: 2px solid yellow; /* Yellow border */
   text-align: center;
   white-space: nowrap; /* Prevent wrapping */
-=======
-#closeModal > span {
-  cursor: pointer;
->>>>>>> 157394cda2b9a191881e5b6e97868d9a947ff86d
 }
